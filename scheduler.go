@@ -20,7 +20,7 @@ type Mapper func(Input, Producer)
 type Reducer func(Receiver, Output)
 
 func mergePipes(pipes []Pipe) Receiver {
-	out := make(Pipe)
+	out := make(Pipe, len(pipes))
 	var wg sync.WaitGroup
 	wg.Add(len(pipes))
 	for _, pipe := range pipes {
