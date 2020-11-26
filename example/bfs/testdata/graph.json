@@ -1,0 +1,42 @@
+[
+  {
+    "label": "a",
+    "distance": 0,
+    "neighbors": {
+      "b": 10,
+      "d": 5
+    }
+  },
+  {
+    "label": "b",
+    "distance": 10,
+    "neighbors": {
+      "c": 1,
+      "d": 2
+    }
+  },
+  {
+    "label": "c",
+    "distance": 9999,
+    "neighbors": {
+      "e": 4
+    }
+  },
+  {
+    "label": "d",
+    "distance": 5,
+    "neighbors": {
+      "b": 3,
+      "c": 9,
+      "e": 2
+    }
+  },
+  {
+    "label": "e",
+    "distance": 9999,
+    "neighbors": {
+      "a": 7,
+      "c": 6
+    }
+  }
+]

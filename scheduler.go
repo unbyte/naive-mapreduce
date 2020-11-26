@@ -38,6 +38,13 @@ func mergePipes(pipes []Pipe) Receiver {
 	return out
 }
 
+// MapReduce runs reduce map on local
+//
+// - should use `range over channel` inside mapper and reducer.
+//
+// - input should be closed after all data are sent.
+//
+// - poolSize is the number of mapper runners.
 func MapReduce(mapper Mapper, reducer Reducer, input Input, output Output, poolSize int) {
 	// input -> broker >>> pipes => mergedPipes -> output
 	pipes := make([]Pipe, poolSize)
