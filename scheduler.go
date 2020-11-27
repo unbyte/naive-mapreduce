@@ -38,9 +38,9 @@ func mergePipes(pipes []Pipe) Receiver {
 	return out
 }
 
-// MapReduce runs reduce map on local
+// MapReduce runs MapReduce locally using goroutine
 //
-// - should use `range over channel` inside mapper and reducer.
+// - should use `for-range` to read data inside mapper and reducer.
 //
 // - input should be closed after all data are sent.
 //
